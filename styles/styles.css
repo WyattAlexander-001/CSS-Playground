@@ -3,6 +3,26 @@ h1 {
     text-align: center;
     text-decoration: red line-through;
     letter-spacing: 25px;
+    font-family: 'Borel', cursive;
+}
+
+h2 {
+    text-decoration: blue underline;
+    background-color: green;
+    /*This will override h1 red line-through if I do h1,h2*/
+}
+
+#yellow {
+    /*Don't spam ids (handful), use classes*/
+    color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+li a {
+    color: magenta;
 }
 
 p {
@@ -10,4 +30,12 @@ p {
     text-align: right;
     line-height: 2em;
     font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="password"] {
+    color: #00ff73;
+}
+
+button:hover {
+    color: red;
 }
