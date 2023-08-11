@@ -1,0 +1,20 @@
+div {
+    width: 200px;
+    background-color: pink;
+}
+
+#one {
+    background-color: purple;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+#two {
+    background-color: yellowgreen;
+    border: 7px red dashed;
+}
+
+#three {
+    background-color: lightblue;
+}
