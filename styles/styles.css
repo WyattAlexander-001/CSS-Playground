@@ -1,0 +1,13 @@
+h1 {
+    background-color: orange;
+    text-align: center;
+    text-decoration: red line-through;
+    letter-spacing: 25px;
+}
+
+p {
+    background-color: #00ff73;
+    text-align: right;
+    line-height: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
