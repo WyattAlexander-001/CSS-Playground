@@ -1,5 +1,9 @@
+body {
+    margin: 0;
+}
+
 div {
-    width: 200px;
+    width: 500px;
     background-color: pink;
 }
 
@@ -13,8 +17,28 @@ div {
 #two {
     background-color: yellowgreen;
     border: 7px red dashed;
+    /*short hand*/
+    padding: 50px;
+    margin-top: 200px;
+    margin-bottom: 0px;
 }
 
 #three {
     background-color: lightblue;
+    border: 5px blue solid;
+    border-radius: 20%;
+    padding: 25px 150px;
+    margin-top: 0px;
+}
+
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(67, 197, 41, 0.781);
 }
