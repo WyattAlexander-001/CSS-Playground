@@ -39,3 +39,16 @@ if (mystery[0] === 'P' && mystery.length > 5 && mystery.indexOf('7') !== -1) {
     console.log("YOU GOT IT!!!");
 }
 
+let mishMashArr = [true, "pineapple", "kikko", 44, 12, "Anni"]
+console.log(mishMashArr[2]);
+console.log(mishMashArr.length); //6 elements
+mishMashArr[2] = "Alex"; //replace element at specific index
+console.log(mishMashArr[2]);
+mishMashArr.push("Wyatt");
+mishMashArr.push("Jason"); //We added two dude
+console.log(mishMashArr);
+mishMashArr.pop(); //pops Jason off
+console.log(mishMashArr);
+mishMashArr.unshift("I'm at the START!"); //added to start!
+console.log(mishMashArr);
+
