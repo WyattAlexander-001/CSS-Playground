@@ -109,3 +109,28 @@ const restaurant = {
 }
 const fullAddress = `${restaurant.address}, ${restaurant.city}, ${restaurant.state} ${restaurant.zipcode}`;
 console.log(fullAddress);
+
+const midterms = {
+    danny: 90,
+    jim: 45
+}
+console.log(midterms.danny);
+midterms.danny = 55;
+console.log(midterms.danny);
+
+const student = {
+    firstName: 'jim',
+    lastName: 'wizard',
+    exams: {
+        midterms: 99,
+        final: 88
+    }
+}
+console.log(student.exams.final);
+
+const comments = [
+    { userName: "", text: "", votes: 0 },
+    { userName: "", text: "YOOOOOOOOOOOO", votes: 0 },
+    { userName: "", text: "", votes: 0 },
+]
+console.log(comments[1].text);
