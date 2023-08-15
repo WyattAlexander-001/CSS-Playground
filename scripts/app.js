@@ -142,3 +142,8 @@ for (let i = 0; i < 5; i++) {
 for (let i = 10; i >= 0; i--) {
     console.log(i);
 }
+
+const animals = ['Wolf', "Tiger", "Gorilla"];
+for (let i = 0; i < animals.length; i++) {
+    console.log(i, animals[i]);
+}
