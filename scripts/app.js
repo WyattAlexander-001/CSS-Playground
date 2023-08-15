@@ -27,7 +27,7 @@ if (weight > 325) {
     console.log(`That's not even a number...`);
 }
 
-const password = "hofsdgfsog oidpfg";
+const password = "passwordWithNoSpaces";
 if (password.length >= 8 && password.indexOf(" ") === -1) {
     console.log("Long Enough Password and No spaces!")
 } else {
@@ -52,3 +52,60 @@ console.log(mishMashArr);
 mishMashArr.unshift("I'm at the START!"); //added to start!
 console.log(mishMashArr);
 
+let fishTank = ["Tuna", "Salmon", "Tilapia"];
+let birdCage = ["Chicken", "Turkey", "Duck"];
+
+let TankCage = fishTank.concat(birdCage);
+console.log(TankCage);
+//console.log(TankCage.sort()); //sort UTF
+console.log(TankCage.includes("Tuna"));//true
+console.log(TankCage.includes("tuna"));//false
+console.log(TankCage.indexOf("Salmon"));
+//console.log(TankCage.reverse()); //Will keep it reversed!
+console.log(TankCage.slice(2)); //makes copy if no arguments, or index of n to end
+console.log(TankCage);
+console.log(TankCage.splice(0, 3,)); //start,end,values
+console.log(TankCage);
+TankCage.splice(1, 0, "Super Chicken");
+console.log(TankCage);
+console.log("===========================================");
+const nums = [1, 2, 3]; //you can add/remove all you want still
+
+const board = [
+    ["O", "X", "O"],
+    ["O", "X", "O"],
+    ["O", "X", "O"]
+]
+console.log(board);
+console.log(board[1][1]);
+
+const fitBitData = {
+    totalSteps: 30870,
+    totalMiles: 200,
+    avgCalsBurned: 469,
+    avgSleep: 2,
+    userName: "JimWizard"
+}
+console.log(fitBitData.totalMiles);
+
+
+const product = {
+    name: "Gummy Bears",
+    inStock: true,
+    price: 1.99,
+    flavors: ["grape", "apple", "cherry"]
+}
+console.log(product["price"]);//Every key is converted to a STRING
+console.log(product.flavors[1]);
+
+
+
+const restaurant = {
+    name: 'Ichiran Ramen',
+    address: `${Math.floor(Math.random() * 100) + 1} Johnson Ave`,
+    city: 'Brooklyn',
+    state: 'NY',
+    zipcode: '11206',
+}
+const fullAddress = `${restaurant.address}, ${restaurant.city}, ${restaurant.state} ${restaurant.zipcode}`;
+console.log(fullAddress);
