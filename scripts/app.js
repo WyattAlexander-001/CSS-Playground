@@ -134,3 +134,11 @@ const comments = [
     { userName: "", text: "", votes: 0 },
 ]
 console.log(comments[1].text);
+
+for (let i = 0; i < 5; i++) {
+    console.log(`Hi number ${i + 1}`);
+}
+
+for (let i = 10; i >= 0; i--) {
+    console.log(i);
+}
