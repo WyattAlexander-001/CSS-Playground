@@ -1,3 +1,4 @@
+
 console.log("Hello World");
 console.log("Hello Jim");
 
@@ -146,4 +147,105 @@ for (let i = 10; i >= 0; i--) {
 const animals = ['Wolf', "Tiger", "Gorilla"];
 for (let i = 0; i < animals.length; i++) {
     console.log(i, animals[i]);
+}
+
+console.log("===========================");
+for (let i = animals.length - 1; i >= 0; i--) {
+    console.log(i, animals[i]);
+}
+
+//Outer happens once, then inner five times 60x!
+for (let i = 0; i <= 10; i++) {
+    console.log(`i is ${i}`);
+    for (let j = 0; j <= 5; j++) {
+        console.log(`    j is ${j}`);
+    }
+}
+
+const seating = [
+    ["Kris", "Bea", "Maria"],
+    ["Wyatt", "Anni", "Hubert"],
+    ["Mark", "Menchie", "Katrina"]
+]
+
+for (let i = 0; i < seating.length; i++) {
+    console.log(seating[i]);
+}
+console.log('=====^Prints out each array^==========')
+
+for (let i = 0; i < seating.length; i++) {
+    const row = seating[i];
+    console.log(`ROW: #${i + 1}`);
+    for (let j = 0; j < row.length; j++) {
+        console.log(row[j]);
+    }
+}
+
+const konohaNinjas = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""],
+]
+
+//--------------------------------------------
+/*
+while (!gameOver) {
+}
+*/
+/*
+const secret = "Password";
+let guess;
+while (guess !== secret) {
+    guess = prompt("Enter Password");
+}
+console.log("Yay, you entered correctly");
+*/
+/*
+let input = prompt("Hey say MEAT").toUpperCase();
+while (true) {
+    input = prompt("You said: " + input).toUpperCase();
+    if (input === "MEAT") {
+        break;
+    }
+}
+console.log("What are you LUFFY?");
+*/
+
+/*
+let maximum = parseInt(prompt("Enter the maximum number!"));
+while (!maximum) {
+    maximum = parseInt(prompt("Enter a valid number!"));
+}
+
+const targetNum = Math.floor(Math.random() * maximum) + 1;
+
+let guess = prompt("Enter your first guess! (Type 'q' to quit)");
+let attempts = 1;
+
+while (parseInt(guess) !== targetNum) {
+    if (guess === 'q') break;
+    guess = parseInt(guess);
+    if (guess > targetNum) {
+        guess = prompt("Too high! Enter a new guess:");
+        attempts++;
+    } else if (guess < targetNum) {
+        guess = prompt("Too low! Enter a new guess:");
+        attempts++;
+    } else {
+        guess = prompt("Invalid guess. Please enter a number or 'q' to quit");
+    }
+}
+
+if (guess === 'q') {
+    console.log("OK, YOU QUIT!")
+} else {
+    console.log("CONGRATS YOU WIN!")
+    console.log(`You got it! It took you ${attempts} guesses`)
+}
+*/
+
+//for of is short hand for loop
+const subreddits = ["Pikmin", "Books", "Bleach", "Naruto"]
+for (let sub of subreddits) {
+    console.log(sub);
 }
