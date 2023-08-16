@@ -1,5 +1,5 @@
 console.log("Connected");
-let input = prompt("Welcome To The Todo List");
+let input = prompt("Welcome To The Todo List....Pick an option.");
 const todos = ['Drink Water', "Study"];
 
 while (input != 'q' && input != 'quit') {
@@ -12,7 +12,10 @@ while (input != 'q' && input != 'quit') {
     } else if (input === 'new') {
         const newTodo = prompt('Ok, new todo?');
         todos.push(newTodo);
+    } else if (input === 'delete') {
+        const index = parseInt(prompt('Enter an index to delete'));
+        todos.splice(index, 1);
     }
-    input = prompt('What would you like to add?');
+    input = prompt('Ok...Pick an option');
 }
 console.log('You quit');
