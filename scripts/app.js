@@ -181,6 +181,11 @@ for (let i = 0; i < seating.length; i++) {
     }
 }
 
+for (let row of seating) {
+    for (let student of row) {
+        console.log(student + " New VERSION ");
+    }
+}
 const konohaNinjas = [
     ["", "", ""],
     ["", "", ""],
