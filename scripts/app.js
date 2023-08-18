@@ -254,3 +254,223 @@ const subreddits = ["Pikmin", "Books", "Bleach", "Naruto"]
 for (let sub of subreddits) {
     console.log(sub);
 }
+
+//functions
+console.log(`Dice:`)
+console.log(Math.floor(Math.random() * 6) + 1); //die
+
+function rollDice(sides) {
+    console.log(Math.floor(Math.random() * sides) + 1);
+}
+
+rollDice(6);
+rollDice(6);
+rollDice(6);
+rollDice(20);
+
+function hiPerson(person, age) {
+    console.log(`HI ${person} you are ${age} years old!`);
+}
+
+hiPerson('Wyatt', 29);
+hiPerson('Anni', 28);
+
+function rant(message) {
+    for (let i = 0; i < 3; i++) {
+        console.log(message.toUpperCase());
+    }
+}
+
+rant('I HATE beets..');
+
+function repeat(str, num) {
+    for (let i = 0; i < num; i++) {
+        console.log(str);
+    }
+}
+
+repeat("I'm gonna repeat", 5);
+
+function combine(str1, str2) {
+    return `${str1} ${str2} SWAG!!!!!`;
+}
+let sum = combine("YOLO", "GUCCI");
+console.log(sum);
+
+//Methods are just functions inside objects
+
+const myMath = {
+    PI: 3.14159,
+    square: function (num) {
+        return num ** 2;
+    },
+    cube: function (num) {
+        return num ** 3;
+    },
+}
+
+console.log(myMath.square(4));
+console.log(myMath.cube(2));
+
+//js shorthand
+const myNewMath = {
+    blah: "Hi!",
+    add(x, y) {
+        return x + y;
+    },
+    multiply(x, y) {
+        return x * y;
+    }
+}
+
+console.log(myNewMath.add(5, 4));
+
+const human = {
+    name: "Jim",
+    gender: "m",
+    hairColor: "black",
+    attack() {
+        console.log(`${this.name} punches!`);
+    }
+}
+human.attack();
+
+//arr method .forEach
+
+const fruit = ['kiwi', 'apple', 'pear', 'lemon'];
+
+//this sucks....Old way, This is an annoymous function
+fruit.forEach(function (el) {
+    console.log(el);
+});
+console.log(`============`);
+
+//this is better
+for (let f of fruit) {
+    console.log(f);
+}
+
+console.log(`============`);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const triples = numbers.map(function (num) {
+    return num * 3
+});
+console.log(numbers);
+console.log(triples);
+
+const titles = ['red dead redemption', 'breaking bad', 'better call saul'];
+const upperTitles = titles.map(function (i) {
+    return i.toUpperCase();
+});
+
+console.log(upperTitles);
+
+// DO NOT ALTER THE FOLLOWING CODE:
+const fullNames = [{ first: 'Albus', last: 'Dumbledore' },
+{ first: 'Harry', last: 'Potter' },
+{ first: 'Hermione', last: 'Granger' },
+{ first: 'Ron', last: 'Weasley' },
+{ first: 'Rubeus', last: 'Hagrid' },
+{ first: 'Minerva', last: 'McGonagall' },
+{ first: 'Severus', last: 'Snape' }];
+
+// Write your code here
+const firstNames = fullNames.map(function (i) {
+    return i.first;
+});
+
+console.log(firstNames);
+
+//arrow functions make functions shorter
+const squareArrow = (x) => {
+    return x ** 2;
+}
+
+const randomNum = () => {
+    return Math.floor(Math.random() * 100) + 1;
+}
+
+console.log(squareArrow(7));
+console.log(randomNum());
+
+//implicit returns. FANCY!
+
+const newRandomNum = () => (Math.floor(Math.random() * 100) + 1);
+console.log('Fancy');
+console.log(newRandomNum());
+
+const newAdd = (a, b) => a + b;
+console.log(`Super FANCY`)
+console.log(newAdd(5, 100));
+
+
+const faveGames = [{
+    title: 'Pikmin 4',
+    score: 10,
+    genre: 'RTS',
+    hero: 'Olimar',
+},
+{
+    title: 'Halo 3',
+    score: 9,
+    genre: 'FPS',
+    hero: 'Master Chief',
+},
+{
+    title: 'Ace Attonery',
+    score: 8,
+    genre: 'Visual Novel',
+    hero: 'Phoenix Wright',
+},
+];
+
+const starScores = faveGames.map(function (i) {
+    return `${i.title}: ${i.score / 2} STARS`;
+});
+console.log(starScores);
+
+const newStarScores = faveGames.map(i => `${i.title}: ${i.score / 2} STARS`);
+console.log(`FANCY`)
+console.log(newStarScores);
+
+//Set Time out
+setTimeout(() => {
+    console.log('are you still there?')
+}, 3000);
+
+//Every 2 seconds interval generate a random number
+/*
+const id = setInterval(() => {
+    console.log(Math.random());
+}, 2000);
+*/
+//use clearInterval(id); to stop it.
+
+//filter, creates new arr matching elements you want
+
+const smallNums = numbers.filter(n => n < 5);
+console.log(smallNums);
+
+const amazingGames = faveGames.filter(f => f.score >= 9);
+console.log(amazingGames);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
