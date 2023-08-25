@@ -455,10 +455,18 @@ console.log(smallNums);
 const amazingGames = faveGames.filter(f => f.score >= 9);
 console.log(amazingGames);
 
+//every returns true if all in an arr match condition
+const examGrades = [75, 65, 68, 100, 99, 88, 77];
+console.log("Did every student get a 65 at least?")
+console.log(examGrades.every(score => score >= 65));
+console.log("I lied, 70 is the passing grade...");
+console.log(examGrades.every(score => score >= 70));
 
-
-
-
+//some returns true if there's at least one entry that is true..Ambiguous
+console.log("Did any student get a 100?");
+console.log(examGrades.some(score => score === 100));
+console.log("Did any student get a 0?");
+console.log(examGrades.some(score => score === 0));
 
 
 
