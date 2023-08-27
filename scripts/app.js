@@ -425,9 +425,11 @@ const faveGames = [{
 },
 ];
 
+// The map method creates a new array by applying a specified function to each element of the original array.
 const starScores = faveGames.map(function (i) {
     return `${i.title}: ${i.score / 2} STARS`;
 });
+console.log(`StarScores:`);
 console.log(starScores);
 
 const newStarScores = faveGames.map(i => `${i.title}: ${i.score / 2} STARS`);
@@ -467,6 +469,25 @@ console.log("Did any student get a 100?");
 console.log(examGrades.some(score => score === 100));
 console.log("Did any student get a 0?");
 console.log(examGrades.some(score => score === 0));
+
+//reduce function
+//arr of prices
+const groceries = [9.99, 1.50, 19.99, 49.99, 30.50];
+
+//For loop way to sum up a an arr: 
+let totalGroceries = 0;
+for (let i of groceries) {
+    totalGroceries += i;
+}
+console.log(`$${totalGroceries}`);
+
+//reduce function
+let reduceVersion = groceries.reduce((acc, current) => {
+    return acc + current;
+});
+console.log("$" + reduceVersion);
+
+//return to arrow functions!
 
 
 
